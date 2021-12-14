@@ -40,9 +40,6 @@ namespace Kursach
             Life = 20 + rand.Next(100);
         }
 
-
-
-
         public virtual void Draw(Graphics g)
         {
             // рассчитываем коэффициент прозрачности по шкале от 0 до 1.0
@@ -62,7 +59,5 @@ namespace Kursach
         }
 
     }
-
-    // новый класс для цветных частиц
     
 }
