@@ -41,11 +41,14 @@ namespace Kursach
             this.label4 = new System.Windows.Forms.Label();
             this.trackBar2 = new System.Windows.Forms.TrackBar();
             this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.trackBar3 = new System.Windows.Forms.TrackBar();
             ((System.ComponentModel.ISupportInitialize)(this.picDisplay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.direction)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.distribution)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
             this.SuspendLayout();
             // 
             // picDisplay
@@ -56,7 +59,6 @@ namespace Kursach
             this.picDisplay.Size = new System.Drawing.Size(776, 620);
             this.picDisplay.TabIndex = 0;
             this.picDisplay.TabStop = false;
-            this.picDisplay.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picDisplay_MouseMove);
             // 
             // timer1
             // 
@@ -75,7 +77,7 @@ namespace Kursach
             // 
             // direction
             // 
-            this.direction.Location = new System.Drawing.Point(798, 29);
+            this.direction.Location = new System.Drawing.Point(794, 29);
             this.direction.Maximum = 360;
             this.direction.Name = "direction";
             this.direction.Size = new System.Drawing.Size(215, 45);
@@ -90,7 +92,6 @@ namespace Kursach
             this.label2.Size = new System.Drawing.Size(86, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Распределение";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // distribution
             // 
@@ -129,7 +130,6 @@ namespace Kursach
             this.label4.Size = new System.Drawing.Size(146, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "Продолжительность жизни";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // trackBar2
             // 
@@ -145,18 +145,39 @@ namespace Kursach
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(795, 269);
+            this.label6.Location = new System.Drawing.Point(795, 333);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(81, 13);
             this.label6.TabIndex = 11;
             this.label6.Text = "Кол-во частиц:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(795, 269);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(107, 13);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Кол-во частиц в тик";
+            // 
+            // trackBar3
+            // 
+            this.trackBar3.Location = new System.Drawing.Point(794, 285);
+            this.trackBar3.Maximum = 100;
+            this.trackBar3.Minimum = 5;
+            this.trackBar3.Name = "trackBar3";
+            this.trackBar3.Size = new System.Drawing.Size(215, 45);
+            this.trackBar3.TabIndex = 13;
+            this.trackBar3.Value = 5;
+            this.trackBar3.Scroll += new System.EventHandler(this.trackBar3_Scroll);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1025, 644);
+            this.Controls.Add(this.trackBar3);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.trackBar2);
             this.Controls.Add(this.label4);
@@ -169,12 +190,12 @@ namespace Kursach
             this.Controls.Add(this.picDisplay);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picDisplay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.direction)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.distribution)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,6 +214,8 @@ namespace Kursach
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TrackBar trackBar2;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TrackBar trackBar3;
     }
 }
 
