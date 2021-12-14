@@ -33,12 +33,6 @@ namespace Kursach
             emitters.Add(this.emitter); // все равно добавляю в список emitters, чтобы он рендерился и обновлялся
             emitter.ParticlesCount++;
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         
 
         // ну и обработка тика таймера, тут просто декомпозицию выполнили
@@ -55,28 +49,6 @@ namespace Kursach
             picDisplay.Invalidate();
            
             label6.Text = "Кол-во частиц: " + emitter.ParticlesCount;
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void picDisplay_MouseMove(object sender, MouseEventArgs e)
-        {
-            // а тут в эмиттер передаем положение мыфки
-            emitter.MousePositionX = e.X;
-            emitter.MousePositionY = e.Y;
         }
 
         private void direction_Scroll(object sender, EventArgs e)
