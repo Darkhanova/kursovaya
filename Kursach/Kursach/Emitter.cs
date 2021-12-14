@@ -10,8 +10,6 @@ namespace Kursach
     class Emitter
     {
         List<Particle> particles = new List<Particle>();
-        public int MousePositionX;
-        public int MousePositionY;
         public float GravitationX = 0;
         public float GravitationY = 1; // пусть гравитация будет силой один пиксель за такт, нам хватит
         public int X; // координата X центра эмиттера, будем ее использовать вместо MousePositionX
@@ -42,8 +40,6 @@ namespace Kursach
             var direction = Direction
                 + (double)Particle.rand.Next(Spreading)
                 - Spreading / 2;
-
-            
 
             particle.SpeedX = (float)(Math.Cos(direction / 180 * Math.PI) * speed);
             particle.SpeedY = -(float)(Math.Sin(direction / 180 * Math.PI) * speed);
